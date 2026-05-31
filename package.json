@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@langchain/core": "^0.3.43",
+    "@langchain/openai": "^0.5.2",
+    "d3": "^7.9.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "type": "module",
+  "scripts": {
+    "cry": "node --watch server.js"
+  }
+}

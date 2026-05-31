@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/blog/index.css">
+</head>
+<body>
+    <header>
+        <div class="blurFilter"></div>
+        <div class="header">
+            <div class="home">HOME</div>
+            <div class="title">V2 ALPHA</div>
+            <div class="v3">V3</div>
+        </div>
+    </header>
+
+
+    <div class="alpha">
+        <div class="alphaLink">
+            <img src="/blog/aa.jpg" class="alphaClick">
+            <div class="alphaClick">Try it out now</div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="blogTitle">THE Intelligence FUNCTION</div>
+        <div class="blogContent">
+
+            <p>It struck me as curious to consider that while we can create functions designed to tackle complex tasks, the idea of a function called 'intelligence' that generates a response based on user input still feels quite unconventional:</p>
+
+            <pre class="code1"><code>let ans = intelligence("Evaluate this situation and return a logical response.");</code></pre>
+
+            <p>The concept of an "intelligent" function is, in a sense, rather intriguing and somewhat unconventional.</p>
+
+            <p>Thanks to large language models (LLMs), this idea isn't just theoretical anymore. We can now prompt a model with a question and get a thoughtful response — not a big surprise on its own, but it opens up some very cool possibilities. One of them inspired me to build an app that solves a frustrating limitation I kept running into while playing LLM-powered, text-based games.</p>
+            <p>While playing these AI-driven games, I noticed two recurring issues:
+                <ul>
+                    <li>Items and environment changes disappeared after a few messages.
+                        This was likely due to limited context windows — after a while, the AI simply “forgets” what happened.</li>
+                    <li>There was no logical coherence.
+                        I could break a key object and continue as if nothing happened. Even though the AI could solve logic puzzles or identify inconsistencies when prompted directly, it didn't apply that same reasoning in real time.</li>
+                </ul>
+            </p>
+
+            <p>These problems break immersion. They make it hard to build persistent, interactive worlds with any meaningful continuity. But it also got me thinking: Why are videogames able to track changes so effectively, and LLMs can’t?</p>
+            <p><h3><b>My Solution: A Map-Based Memory System</b></h3></p>
+            <p>Games store every object’s state, condition, and location. That’s why they maintain continuity — when you return to a room, the game knows exactly what’s there. I decided to bring that same principle into LLM territory.</p>
+            <p>Instead of throwing all environmental data into one giant blob and hoping the model remembers, I built a map-based system. The world is divided into smaller locations, and each location has its own state data. When a player enters a location, only the relevant data is passed into the prompt. This way:
+                <ul>
+                    <li>The model deals with smaller, more focused chunks of context.</li>
+                    <li>Environmental persistence improves dramatically. </li>
+                    <li>It avoids stuffing too much information into the prompt or relying heavily on retrieval-augmented generation (RAG).</li>
+                </ul>
+            </p>
+
+            <p>This approach helped address the memory issue. But what about logic?</p>
+            <p><h3><b>Logic Problems Need… Reasoning Systems</b></h3></p>
+            <p>Here’s where things get even more interesting. Despite making logical mistakes mid-game, LLMs are capable of reasoning through errors if asked directly. So, the issue isn’t that they can’t reason — it’s that they don’t do it by default in every turn. That gave me an idea.</p>
+            <p>What if I could combine traditional LLM responses with short, structured reasoning chains? Not full-blown chain-of-thought trees that take minutes to process, but compact, decision-specific ones that check for consistency. Basically, a lightweight hybrid system.</p>
+            <p>That’s what my code does. Whenever a player attempts an action, it briefly evaluates whether it’s logically possible in the context of the current environment. For now, it's simple — preventing actions that break world physics or contradict previous events — but it works. And it’s scalable.</p>
+            <p>And what’s exciting is how cheap this can be compared to running full reasoning models. By chaining together basic steps and embedding light logic checks, we can supercharge generic LLMs with context-awareness and decision-making that feels coherent.</p>
+        
+            <h3>Final Thoughts</h3>
+            <p>We're still early in this space, but the potential is huge. Combining LLMs with structured memory and lightweight reasoning systems creates a more believable, persistent world — and gets us one step closer to truly intelligent gameplay.</p>
+        
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="/blog/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+node server.js at the root of the directory and that's it you're ready :p

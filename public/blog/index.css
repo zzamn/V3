@@ -1,0 +1,169 @@
+body {
+    background-color: #0b0c12;
+    color: #ffffff;
+
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 7vh;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+}
+
+.header div {
+    padding: 1rem;
+    width: 10rem;
+}
+
+
+
+.blurFilter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    backdrop-filter: blur(15px);
+}
+
+.blog {
+    margin-top: 14vh;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.blogTitle {
+    margin-top: 5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.blogContent {
+    margin-top: 2rem;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.title {
+    cursor:default;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #403F4C;
+    font-weight: bold;
+}
+
+img {
+    width: 30vw;
+}
+
+.alpha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:13vh;
+    align-self: center;
+}
+.alphaLink {
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.alphaLink:hover {
+    animation: crazy 6s infinite alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.4s;
+}
+
+@keyframes crazy {
+    0% {
+        filter: sepia(0%);
+        filter: hue-rotate(0deg);
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+
+    10% {
+        filter: sepia(0%);
+        filter: hue-rotate(0deg);
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+
+    50% {
+        filter: sepia(0%);
+        scale: 1.05;
+        filter: hue-rotate(180deg);
+        transform: rotate3d(1, 1, 0, 360deg);
+        rotate: 720deg;
+    }
+
+    75% {
+        filter: sepia(0%);
+        scale: 0.75;
+        filter: hue-rotate(360deg);
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+    90% {
+        filter: sepia(100%);
+        transform: rotate3d(1, 1, 1, 180deg);
+    }
+
+    95% {
+        scale: 1;
+        filter: sepia(0%);
+        filter: hue-rotate(0deg);
+        transform: rotate3d(1, 1, 0, 0deg);
+        rotate: 0deg;
+    }
+    100% {
+        scale: 1;
+        filter: sepia(0%);
+        filter: hue-rotate(0deg);
+        transform: rotate3d(1, 1, 0, 0deg);
+        rotate: 0deg;
+
+    }
+
+
+    
+}
+
+.blogContent p {
+    text-align: left;
+}
+
+
+.blogContent ul {
+    text-align: left;
+}
+
+.code1 {
+    background-color: black;
+}
+
+.home, .v3 {
+    cursor: pointer;
+
+}
+
+.home:hover, .v3:hover {
+    text-decoration: underline;
+    scale: 1.1;
+}

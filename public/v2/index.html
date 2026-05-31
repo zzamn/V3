@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/v2/index.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="wait">
+        <div class="waitText">Loading...</div>
+    </div>
+    <div class="chat makeItSmol">
+        <div class="header">
+            <div class="peanis">🗖</div>
+            <div class="environment chat-tab active" data-chat="environment">environment</div>
+            <div class="doma chat-tab" data-chat="doma">doma</div>
+        </div>
+        <div class="content" id="chatContent">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="input-area">
+            <div class="input">
+                <textarea id="messageInput" placeholder="Type your message..."></textarea>
+            </div>
+            <div class="submitButton">
+                <button id="submitBtn">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <script type = "module" src="/v2/map.js"></script>
+    <script type="module" src="/v2/move.js"></script>
+    <script type="module" src="/v2/chat.js"></script>
+    
+    
+</body>
+</html>
